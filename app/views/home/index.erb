@@ -1,6 +1,6 @@
 <section class="h-[100vh] flex flex-col-reverse">
-    <button class="login proxima-light">SIGN UP</button>
-    <button class="login proxima-light">LOG IN</button>
+    <%= link_to "SIGN UP", new_user_registration_path,class: "login proxima-light" %>
+    <%= link_to "LOG IN", new_user_session_path, class: "login proxima-light" %>
 
     <img src='/assets/logo.png' class="m-auto" alt="gone coins">
 </section>

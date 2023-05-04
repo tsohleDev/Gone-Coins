@@ -77,11 +77,6 @@ section {
     font-size: 3.5em;
 }
 
-button:active {
-    color: #5FB523;
-    background-color: #3778C2;
-}
-
 .proxima-bold {
     font-family: 'proxima-nova-2', sans-serif;
     font-weight: bold;
@@ -96,6 +91,13 @@ button:active {
 .login {
     font-size: 2em;
     padding: 10px 0;
+    text-align: center;
+}
+
+button:active,
+.login:active {
+    color: #5FB523;
+    background-color: #3778C2;
 }
 
 .m-auto {

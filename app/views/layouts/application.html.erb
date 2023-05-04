@@ -13,15 +13,20 @@
   </head>
 
   <body>
-    <header class='flex fixed justify-between bg-primary'>
-      <button class='bg-transparent active:text-white'>
-        <span class="material-symbols-outlined hamburger-size">
-          menu
-        </span>
-      </button>
-    </header>
-    <main class='mt-15'>
-     <%= yield %>
+    <% if !current_page?(root_path) %>
+      <header class='flex fixed justify-between bg-primary'>
+        <button class='bg-transparen'>
+          <span class="material-symbols-outlined hamburger-size">
+            menu
+          </span>
+        </button>
+      </header>
+    <% end %>
+    
+    <main>
+      <p class="notice"><%= notice %></p>    
+      <p class="alert"><%= alert %></p>   
+      <%= yield %>
     </main>
   </body>
 </html>

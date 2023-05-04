@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true > %>
   </head>
 
   <body>
-    <header class>
-      <nav>
-        <ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
-          <li><%= link_to "Sign Up", signup_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
-        </ul>
-      </nav>
+    <header class='flex fixed justify-between bg-primary'>
+      <button class='bg-transparent active:text-white'>
+        <span class="material-symbols-outlined hamburger-size">
+          menu
+        </span>
+      </button>
     </header>
-    <%= yield %>
+    <main class='mt-15'>
+     <%= yield %>
+    </main>
   </body>
 </html>

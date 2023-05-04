@@ -13,3 +13,91 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+header {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+main {
+  padding: 20% 20px 10px;
+  height: 100vh;
+}
+
+section {
+  height: 88vh;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-col-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.bg-primary {
+    background-color: #3778C2;
+}
+
+.bg-secondary {
+    background-color: #5FB523
+}
+
+.bg-tertiary {
+    background-color: #434B54;
+}
+
+.text-primary {
+    color: #3778C2;
+}
+
+.text-secondary {
+    color: #5FB523;
+}
+
+.text-tertiary {
+    color: #434B54;
+}
+
+.hamburger-size {
+    font-size: 3.5em;
+}
+
+button:active {
+    color: #5FB523;
+    background-color: #3778C2;
+}
+
+.proxima-bold {
+    font-family: 'proxima-nova-2', sans-serif;
+    font-weight: bold;
+}
+
+.proxima-light {
+    font-family: 'proxima-nova-2', sans-serif;
+    font-weight: lighter;
+    opacity: 0.6;
+}
+
+.login {
+    font-size: 2em;
+    padding: 10px 0;
+}
+
+.m-auto {
+  margin: auto;
+}

@@ -44,9 +44,17 @@ section {
     flex-direction: row-reverse;
 }
 
+.align-middle {
+    align-items: center;
+}
+
 .flex-col-reverse {
     display: flex;
     flex-direction: column-reverse;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
 
 .bg-primary {
@@ -73,6 +81,10 @@ section {
     color: #434B54;
 }
 
+.text-white {
+    color: #FFFFFF;
+}
+
 .hamburger-size {
     font-size: 3.5em;
 }
@@ -80,6 +92,11 @@ section {
 .proxima-bold {
     font-family: 'proxima-nova-2', sans-serif;
     font-weight: bold;
+}
+
+.proxima-regular {
+    font-family: 'proxima-nova-2', sans-serif;
+    font-weight: 400;
 }
 
 .proxima-light {
@@ -102,4 +119,19 @@ button:active,
 
 .m-auto {
   margin: auto;
+}
+
+.text-2xl {
+  font-size: 1.5em;
+}
+
+form {
+  margin: 30px -20px;
+}
+
+input {
+    width: 100vw;
+    border: 1px solid #0004;
+    padding: 20px !important;
+    font-size: 1.5em !important;
 }

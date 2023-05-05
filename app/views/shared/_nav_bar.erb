@@ -1,0 +1,24 @@
+<% if current_page?(new_user_session_path) %>
+  <% page_info = {title: "LOGIN", button: "Login", link: '/'} %>
+<% elsif current_page?(new_user_registration_path) %>
+  <% page_info = {title: "REGISTER", button: "Next", link: '/'} %>
+<% else %>
+  <% page_info = {title: "Home", button: "Get Started"} %>
+<% end %>
+
+<header class='flex fixed justify-between align-middle bg-primary'>
+    <button class='bg-transparen text-white'>
+      <span class="material-symbols-outlined hamburger-size">
+        menu
+      </span>
+    </button>
+
+    <h1 class='text-center proxima-regular text-white text-2xl font-bold'>
+      <%= page_info[:title] %>
+    </h1>
+
+    <button id="submit-form" class='text-white proxima-light'>
+      <%= page_info[:button] %>
+    </button>
+
+</header>

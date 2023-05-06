@@ -82,7 +82,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+ production:
   <<: *default
+  url: <%= ENV['DATABASE_URL']
   database: Gone_Coins_production
   username: Gone_Coins
   password: <%= ENV["GONE_COINS_DATABASE_PASSWORD"] %>

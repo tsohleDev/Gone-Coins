@@ -1,24 +1,30 @@
 <% if current_page?(new_user_session_path) %>
-  <% page_info = {title: "LOGIN", button: "Login"} %>
+  <% page_info = {link: 'back', title: "LOGIN", button: "Login"} %>
 <% elsif current_page?(new_user_registration_path) %>
-  <% page_info = {title: "REGISTER", button: "Next"} %>
+  <% page_info = {link: 'back', title: "REGISTER", button: "Next"} %>
 <%elsif current_page?(groups_path) %>
-  <% page_info = {title: "GROUPS", button: "Search"} %>
+  <% page_info = {link: 'menu', title: "GROUPS", button: "Search"} %>
 <% elsif current_page?(new_group_path) %>
-  <% page_info = {title: "NEW GROUP", button: "Create"} %>
+  <% page_info = {link: 'back', title: "NEW GROUP", button: "Create"} %>
 <% elsif current_page?(group_transactions_path) %>
-  <% page_info = {title: "TRANSACTIONS", button: "Search"} %>
+  <% page_info = {link: 'back', title: "TRANSACTIONS", button: "Search"} %>
 <% elsif current_page?(new_group_transaction_path) %>
-  <% page_info = {title: "NEW TRANSACTION", button: "Create"} %>
+  <% page_info = {link: 'back', title: "NEW TRANSACTION", button: "Create"} %>
 <% else %>
-  <% page_info = {title: "GONE COINS", button: ""} %>
+  <% page_info = {link: 'menu', title: "GONE COINS", button: ""} %>
 <% end %>
 
 <header class='flex fixed justify-between align-middle bg-primary'>
     <button class='bg-transparen text-white'>
-      <span class="material-symbols-outlined hamburger-size">
-        menu
-      </span>
+      <% if page_info[:link] == 'menu' %>
+        <span class="material-symbols-outlined hamburger-size">
+          menu
+        </span>
+      <% else %>
+        <span class="material-symbols-outlined back">
+          keyboard_backspace
+        </span>
+      <% end %>
     </button>
 
     <h1 class='text-center proxima-regular text-white text-2xl font-bold'>
@@ -28,5 +34,10 @@
     <button id="submit-form" class='text-white proxima-light'>
       <%= page_info[:button] %>
     </button>
-
 </header>
+
+<script>
+  document.querySelector('.back').addEventListener('click', () => {
+    window.history.back();
+  });
+</script>

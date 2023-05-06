@@ -3,14 +3,12 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <div id="groups" class="w-100">
+  <div id="transactions" class="w-100">
     <%= render 'shared/total_card', total:@total  %>
-    <%= render @groups %>
+    <%= render @transactions %>
   </div>
 
   <div class="bg-secondary w-100">
-    <%= link_to 'New group', new_group_path, class:'proxima-bold bg-secondary groups-add'%>
+    <%= link_to 'New transaction', new_group_transaction_path, class:'proxima-bold bg-secondary groups-add'%>
   </div>
 </section>
-
-

@@ -3,16 +3,29 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    # Get all groups with the transactions for each group
+    @groups = Group.includes(:transactions).all
+
+    # sum up all the transactions amounts
+    @total = @groups.map { |group| group.transactions.sum(:amount) }.sum
   end
 
   # GET /groups/1 or /groups/1.json
   def show
+    #redirect to the transactions view
+    redirect_to group_transactions_url(@group)
+    # Get all transactions for this grou
+    
+    # @transactions = Transaction.where(group_id: @group.id)
+    # @transactions = @transactions.order(created_at: :desc)
+
+    #and render the transactions view
   end
 
   # GET /groups/new
   def new
     @group = Group.new
+    @group.user = current_user
   end
 
   # GET /groups/1/edit
@@ -66,5 +79,6 @@ class GroupsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def group_params
       params.require(:group).permit(:name, :description, :icon)
+      .merge(user_id: current_user.id)
     end
 end

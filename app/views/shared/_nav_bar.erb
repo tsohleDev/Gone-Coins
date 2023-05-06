@@ -1,9 +1,17 @@
 <% if current_page?(new_user_session_path) %>
-  <% page_info = {title: "LOGIN", button: "Login", link: '/'} %>
+  <% page_info = {title: "LOGIN", button: "Login"} %>
 <% elsif current_page?(new_user_registration_path) %>
-  <% page_info = {title: "REGISTER", button: "Next", link: '/'} %>
+  <% page_info = {title: "REGISTER", button: "Next"} %>
+<%elsif current_page?(groups_path) %>
+  <% page_info = {title: "GROUPS", button: "Search"} %>
+<% elsif current_page?(new_group_path) %>
+  <% page_info = {title: "NEW GROUP", button: "Create"} %>
+<% elsif current_page?(group_transactions_path) %>
+  <% page_info = {title: "TRANSACTIONS", button: "Search"} %>
+<% elsif current_page?(new_group_transaction_path) %>
+  <% page_info = {title: "NEW TRANSACTION", button: "Create"} %>
 <% else %>
-  <% page_info = {title: "Home", button: "Get Started"} %>
+  <% page_info = {title: "GONE COINS", button: ""} %>
 <% end %>
 
 <header class='flex fixed justify-between align-middle bg-primary'>

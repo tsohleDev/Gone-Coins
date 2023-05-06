@@ -1,0 +1,11 @@
+<%= link_to '/', class:'flex align-middle card px-20' do %>
+  
+  <div class="flex flex-col justify-between w-100 mx-10">
+    <h2 class="proxima-light text-xl"><%= transaction.name %></h2>
+    <p class="proxima-light text-sm">
+      <%= transaction.updated_at.strftime('%d %B %Y') %>
+    </p>
+  </div>
+
+  <h4 class="proxima-bold 2xl prox" ><%= number_to_currency(transaction.amount) %></h4>
+<% end %>

@@ -16,13 +16,13 @@
 @import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 
 * {
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    width: 100%;
-    padding: 12px 0;
+  width: 100%;
+  padding: 12px 0;
 }
 
 .back {
@@ -31,8 +31,8 @@ header {
 
 main {
   padding: 20% 0 10px;
-  height: 88svh;
-  background-color:#ededef;
+  height: 88vh;
+  background-color: #ededef;
 }
 
 section {
@@ -41,9 +41,9 @@ section {
 
 h2,
 h4,
-h5, 
+h5,
 p {
-  color: #434B54;
+  color: #434b54;
 }
 
 .fixed {
@@ -69,93 +69,92 @@ p {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .flex {
-    display: flex;
-
+  display: flex;
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-row-reverse {
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .align-middle {
-    align-items: center;
+  align-items: center;
 }
 
 .flex-col-reverse {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .bg-primary {
-    background-color: #3778C2;
+  background-color: #3778c2;
 }
 
 .bg-secondary {
-    background-color: #5FB523
+  background-color: #5fb523;
 }
 
 .bg-tertiary {
-    background-color: #434B54;
+  background-color: #434b54;
 }
 
 .text-primary {
-    color: #3778C2;
+  color: #3778c2;
 }
 
 .text-secondary {
-    color: #5FB523;
+  color: #5fb523;
 }
 
 .text-tertiary {
-    color: #434B54;
+  color: #434b54;
 }
 
 .text-white {
-    color: #FFFFFF;
+  color: #fff;
 }
 
 .hamburger-size {
-    font-size: 3.5em;
+  font-size: 3.5em;
 }
 
 .proxima-bold {
-    font-family: 'proxima-nova-2', sans-serif;
-    font-weight: bold;
+  font-family: 'proxima-nova-2', sans-serif;
+  font-weight: bold;
 }
 
 .proxima-regular {
-    font-family: 'proxima-nova-2', sans-serif;
-    font-weight: 400;
+  font-family: 'proxima-nova-2', sans-serif;
+  font-weight: 400;
 }
 
 .proxima-light {
-    font-family: 'proxima-nova-2', sans-serif;
-    font-weight: lighter;
+  font-family: 'proxima-nova-2', sans-serif;
+  font-weight: lighter;
 }
 
 .login {
-    font-size: 2em;
-    padding: 10px 0;
-    text-align: center;
+  font-size: 2em;
+  padding: 10px 0;
+  text-align: center;
 }
 
 button {
@@ -165,8 +164,8 @@ button {
 
 button:active,
 .login:active {
-    color: #5FB523;
-    background-color: #3778C2;
+  color: #5fb523;
+  background-color: #3778c2;
 }
 
 .m-auto {
@@ -190,10 +189,10 @@ form {
 }
 
 input {
-    width: 100vw;
-    border: 1px solid #0004;
-    padding: 20px !important;
-    font-size: 1.5em !important;
+  width: 100vw;
+  border: 1px solid #0004;
+  padding: 20px !important;
+  font-size: 1.5em !important;
 }
 
 .icon {
@@ -201,50 +200,46 @@ input {
   padding: 13px;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-10 {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .mx-20 {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 .mx-35 {
-    margin: 0 35px;
+  margin: 0 35px;
 }
 
 .my-20 {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .p-10 {
-    padding: 10px;
+  padding: 10px;
 }
 
 .py-20 {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .px-20 {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 .py-10 {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .card {
-    background: #fff;
-    margin: 10px;
-    border-radius: 21px;
-    box-shadow: 1px 1px #0008;
+  background: #fff;
+  margin: 10px;
+  border-radius: 21px;
+  box-shadow: 1px 1px #0008;
 }
 
 .total {
-    background-color: #fff;
-    margin: 0;
+  background-color: #fff;
+  margin: 0;
 }

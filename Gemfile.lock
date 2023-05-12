@@ -127,6 +127,9 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.14.4-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.14.4-x86_64-linux)
+      racc (~> 1.4)
+    pg (1.5.3)
     pg (1.5.3-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -182,6 +185,8 @@ GEM
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.29-x64-mingw-ucrt)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.0.29-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.3.2)
     turbo-rails (1.4.0)
@@ -211,6 +216,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap

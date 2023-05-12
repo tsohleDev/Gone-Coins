@@ -1,18 +1,18 @@
 databases:
-  - name: FreeLanceII
-    databaseName: sers0
-    user: sers0_user
+  - name: bizz-app
+    databaseName: biz_app_development
+    user: biz_app_development_user
 
 services:
   - type: web
-    name: "Gone Coins"
+    name: Bizz-App
     env: ruby
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    buildCommand: './bin/render-build.sh'
+    startCommand: 'bundle exec puma -C config/puma.rb'
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: FreeLanceII
+          name: bizz-app
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

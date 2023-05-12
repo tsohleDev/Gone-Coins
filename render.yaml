@@ -1,7 +1,7 @@
 databases:
   - name: Gone_Coins
     databaseName: gone_coins
-    user: Gone_Coins
+    user: gone_coins_user
 
 services:
   - type: web

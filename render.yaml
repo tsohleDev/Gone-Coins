@@ -1,6 +1,6 @@
 databases:
   - name: Gone_Coins
-    databaseName: goneCoins
+    databaseName: gone_coins
     user: Gone_Coins
 
 services:

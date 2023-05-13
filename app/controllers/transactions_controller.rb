@@ -3,7 +3,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions or /transactions.json
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.all.where(group_id: params[:group_id])
     @total = @transactions.sum(:amount)
   end
 

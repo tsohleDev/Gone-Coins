@@ -2,7 +2,7 @@ class CreateTransactions < ActiveRecord::Migration[7.0]
   def change
     create_table :transactions do |t|
       t.string :name
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: false
       t.references :group, null: false, foreign_key: true
 
       t.timestamps

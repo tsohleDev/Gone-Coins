@@ -1,0 +1,20 @@
+<div class="mx-auto md:w-2/3 w-full">
+  <%= form_with(model:@transaction, url: group_transactions_path, class: "contents") do |form| %>
+    <div class="field">
+      <%= form.text_field :name, placeholder:"Name", class:'proxima-light' %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :amount, placeholder:"Amount", class:'proxima-light' %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  const submitBtn = document.getElementById("submit-form");
+  const form = document.querySelector("form");
+
+  submitBtn.addEventListener("click", () => {
+    form.submit();
+  });
+</script>

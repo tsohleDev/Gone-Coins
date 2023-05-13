@@ -1,0 +1,13 @@
+<div class='flex item-center justify-around'>
+    <span class="material-symbols-outlined menu-icon">
+        <%= icon %>
+    </span>
+
+    <%if title != 'Logout'%>
+        <%= link_to title, link, class:'proxima-bold menu-title text-white'%>
+    <%else%>
+        <%= form_tag destroy_user_session_path, method: :delete do %>
+          <%= submit_tag "Logout" %>
+        <% end %>
+    <%end%>
+</div>

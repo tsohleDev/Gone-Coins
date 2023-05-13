@@ -1,0 +1,34 @@
+<section class="flex flex-col groups">
+  <%= render 'shared/menu' %>
+
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div id="groups" class="w-100">
+    <%= render 'shared/total_card', total:@total  %>
+    <%= render @groups %>
+  </div>
+
+  <div class="bg-secondary w-100">
+    <%= link_to 'New group', new_group_path, class:'proxima-bold bg-secondary groups-add'%>
+  </div>
+</section>
+
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.menu-container');
+  const menuIcon = document.querySelector('.hamburger');
+
+
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('menu');
+
+    if (nav.classList.contains('menu')) {
+      menuIcon.innerHTML = 'close';
+    } else {
+      menuIcon.innerHTML = 'menu';
+    }
+  });
+</script>

@@ -26,7 +26,11 @@
         ]
       }
     ],
-    "csstree/validator": true
+    "no-descending-specificity": null,
+    "declaration-block-single-line-max-declarations": null,
+    "csstree/validator": null,
+    "no-duplicate-selectors": null,
+    "property-no-unknown": null
   },
   "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
 }

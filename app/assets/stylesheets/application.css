@@ -1,0 +1,344 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  padding: 12px 0;
+}
+
+.back {
+  font-size: 2em;
+}
+
+main {
+  padding: 20% 0 10px;
+  height: 88vh;
+  background-color: #ededef;
+}
+
+section {
+  height: 88vh;
+}
+
+h2,
+h4,
+h5,
+p {
+  color: #434b54;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.groups {
+  justify-content: space-between;
+  align-items: center;
+  overflow: scroll;
+}
+
+.groups-add {
+  text-align: center;
+  font-size: 2em;
+  border: 1px solid #fff;
+  margin: 17px;
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.align-middle {
+  align-items: center;
+}
+
+.flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-primary {
+  background-color: #3778c2;
+}
+
+.bg-secondary {
+  background-color: #5fb523;
+}
+
+.bg-tertiary {
+  background-color: #434b54;
+}
+
+.text-primary {
+  color: #3778c2;
+}
+
+.text-secondary {
+  color: #5fb523;
+}
+
+.text-tertiary {
+  color: #434b54;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.hamburger-size {
+  font-size: 3.5em;
+}
+
+.proxima-bold {
+  font-family: 'proxima-nova-2', sans-serif;
+  font-weight: bold;
+}
+
+.proxima-regular {
+  font-family: 'proxima-nova-2', sans-serif;
+  font-weight: 400;
+}
+
+.proxima-light {
+  font-family: 'proxima-nova-2', sans-serif;
+  font-weight: lighter;
+}
+
+.login {
+  font-size: 2em;
+  padding: 10px 0;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+button:active,
+.login:active {
+  color: #5fb523;
+  background-color: #3778c2;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.text-sm {
+  font-size: 0.6em;
+}
+
+.text-xl {
+  font-size: 1.3em;
+}
+
+.text-2xl {
+  font-size: 1.5em;
+}
+
+form {
+  margin: 30px 0;
+}
+
+input {
+  width: 88vw;
+  border: 1px solid #0004;
+  padding: 20px !important;
+  font-size: 1.5em !important;
+}
+
+.icon {
+  width: 6em;
+  padding: 13px;
+}
+
+.w-20 {
+  width: 20em;
+}
+
+.mx-10 {
+  margin: 0 10px;
+}
+
+.mx-20 {
+  margin: 0 20px;
+}
+
+.mx-35 {
+  margin: 0 35px;
+}
+
+.my-20 {
+  margin: 20px 0;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.px-10 {
+  padding: 0 10px;
+}
+
+.py-20 {
+  padding: 20px 0;
+}
+
+.px-20 {
+  padding: 0 20px;
+}
+
+.py-10 {
+  padding: 10px 0;
+}
+
+.card {
+  background: #fff;
+  margin: 10px;
+  border-radius: 21px;
+  box-shadow: 1px 1px #0008;
+}
+
+.total {
+  background-color: #fff;
+  margin: 0;
+}
+
+.pop-up {
+  color: white;
+  background: #54ed98;
+  font-size: 2rem;
+  text-align: center;
+  animation: fadeOut 3s forwards;
+}
+
+#notice {
+  display: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.menu-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.menu {
+  display: block;
+  position: fixed;
+  left: 0;
+  opacity: 0.95;
+  width: 20rem;
+  height: 100vh;
+  background-color: #3778c2;
+}
+
+.menu-icon {
+  font-size: 3rem;
+  margin: 1rem;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.search-size {
+  font-size: 2.2rem;
+}
+
+.menu-title {
+  align-self: center;
+  font-size: x-large;
+  padding: 20px 0;
+  border-bottom: 1px solid #bfbfbf;
+  color: #cfcfcf;
+}
+
+.menu-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  font-family: proxima-bold, sans-serif;
+  align-self: center;
+  font-size: x-large;
+  color: #cfcfcf;
+  text-align: left;
+  width: auto;
+  border: 0;
+  font-weight: bold;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 0 0 10px 0 !important;
+}

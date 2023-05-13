@@ -1,0 +1,11 @@
+<%= link_to group, class:'flex align-middle card' do %>
+  <img src="<%= group.icon %>" alt="<%= group.name %>" class='icon'>
+  <div class="flex flex-col mx-10">
+    <h2 class="proxima-light text-xl"><%= group.name %></h2>
+    <p class="proxima-light text-sm">
+      <%= group.updated_at.strftime('%d %B %Y') %>
+    </p>
+  </div>
+
+  <h4 class="proxima-bold 2xl m-auto" ><%= number_to_currency(group.transactions.sum(:amount)) %></h4>
+<% end %>

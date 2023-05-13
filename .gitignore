@@ -29,6 +29,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/environments
+/config/credentials.yml.enc
+/config/database.yml
+/config/puma.rb
+
 
 /app/assets/builds/*
 !/app/assets/builds/.keep

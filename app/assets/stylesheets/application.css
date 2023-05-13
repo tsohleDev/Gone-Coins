@@ -273,9 +273,11 @@ input {
     display: block;
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     display: none;
@@ -294,7 +296,7 @@ input {
   left: 0;
   opacity: 0.95;
   width: 20rem;
-  height: 100svh;
+  height: 100vh;
   background-color: #3778c2;
 }
 
@@ -329,7 +331,7 @@ input {
 
 input[type="submit"] {
   background-color: transparent;
-  font: proxima-bold;
+  font-family: proxima-bold, sans-serif;
   align-self: center;
   font-size: x-large;
   color: #cfcfcf;

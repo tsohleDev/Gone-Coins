@@ -6,6 +6,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Gone Coins ](#-practice-test-driven-developmenttdd-)
+  - [Live Demo](#-live-demo-)
   - [🛠 Built With ](#-built-with-)
   - [🛠 Tech Stack ](#-tech-stack-)
     - [Key Features ](#key-features-)
@@ -25,6 +26,16 @@
 # 📖 Gone Coins <a name="about-project"></a>
 
 Gone Coins is a budget app developed with Ruby on Rails that helps users manage their personal finances by creating custom budgets, tracking expenses, monitoring savings, and generating reports to visualize spending habits. The app is built with a modern and responsive design, follows best practices for maintainability and scalability, and integrates various third-party APIs to enhance functionality. User data is encrypted and stored securely on the servers, and regular security audits are performed to ensure a secure and reliable service.
+
+## Live Demo
+
+#### OnRender
+Checkout [gone-coins](https://gone-coins.onrender.com/groups) Live!
+
+#### Video Demo
+https://github.com/tsohleDev/Gone-Coins/assets/102636489/51294807-eb27-40ff-96aa-892c215db73f
+
+
 
 ## 🛠 Built With <a name="built-with"></a>
 

@@ -1,0 +1,13 @@
+<section class='menu-container'>
+
+    <div class='flex flex-col m-auto items-center'>
+        <img src='/assets/logo.png' class="menu-img" alt="gone coins">
+        <h5 class='proxima-bold text-white text-xl'  ><%= @user.name %></h5>
+    </div>
+
+    <div class='my-5'>
+      <%= render 'shared/menu_nav', icon: 'settings', title: 'Edit Groups', link: '/'  %>
+      <%= render 'shared/menu_nav', icon: 'tips_and_updates', title: 'Budget Tips', link: '/'  %>
+      <%= render 'shared/menu_nav', icon: 'logout', title: 'Logout', link: destroy_user_session_path  %>
+    </div>
+</section>

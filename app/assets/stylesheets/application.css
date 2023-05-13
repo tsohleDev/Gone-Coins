@@ -189,7 +189,7 @@ form {
 }
 
 input {
-  width: 100vw;
+  width: 88vw;
   border: 1px solid #0004;
   padding: 20px !important;
   font-size: 1.5em !important;
@@ -198,6 +198,10 @@ input {
 .icon {
   width: 6em;
   padding: 13px;
+}
+
+.w-20 {
+  width: 20em;
 }
 
 .mx-10 {
@@ -216,8 +220,16 @@ input {
   margin: 20px 0;
 }
 
+.my-5 {
+  margin: 5rem 0;
+}
+
 .p-10 {
   padding: 10px;
+}
+
+.px-10 {
+  padding: 0 10px;
 }
 
 .py-20 {
@@ -242,4 +254,89 @@ input {
 .total {
   background-color: #fff;
   margin: 0;
+}
+
+.pop-up {
+  color: white;
+  background: #54ed98;
+  font-size: 2rem;
+  text-align: center;
+  animation: fadeOut 3s forwards;
+}
+
+#notice {
+  display: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.menu-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.menu {
+  display: block;
+  position: fixed;
+  left: 0;
+  opacity: 0.95;
+  width: 20rem;
+  height: 100svh;
+  background-color: #3778c2;
+}
+
+.menu-icon {
+  font-size: 3rem;
+  margin: 1rem;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.search-size {
+  font-size: 2.2rem;
+}
+
+.menu-title {
+  align-self: center;
+  font-size: x-large;
+  padding: 20px 0;
+  border-bottom: 1px solid #bfbfbf;
+  color: #cfcfcf;
+}
+
+.menu-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  font: proxima-bold;
+  align-self: center;
+  font-size: x-large;
+  color: #cfcfcf;
+  text-align: left;
+  width: auto;
+  border: 0;
+  font-weight: bold;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 0 0 10px 0 !important;
 }

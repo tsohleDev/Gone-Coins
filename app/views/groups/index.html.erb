@@ -1,4 +1,6 @@
 <section class="flex flex-col groups">
+  <%= render 'shared/menu' %>
+
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
@@ -14,3 +16,19 @@
 </section>
 
 
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.menu-container');
+  const menuIcon = document.querySelector('.hamburger');
+
+
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('menu');
+
+    if (nav.classList.contains('menu')) {
+      menuIcon.innerHTML = 'close';
+    } else {
+      menuIcon.innerHTML = 'menu';
+    }
+  });
+</script>

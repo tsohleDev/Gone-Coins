@@ -3,6 +3,8 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
+    @user = current_user
+
     # Get all groups with the transactions for each group
     @groups = Group.includes(:transactions).all
 

@@ -18,8 +18,11 @@
     <% end %>
 
     <main>
-      <p class="notice"><%= notice %></p>    
-      <p class="alert"><%= alert %></p>   
+      <div class='fixed w-100'>
+        <p class="notice pop-up"><%= notice %></p>    
+        <p class="alert pop-up"><%= alert %></p>   
+      </div>
+
       <%= yield %>
     </main>
   </body>

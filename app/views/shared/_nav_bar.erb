@@ -1,23 +1,33 @@
-<% if current_page?(new_user_session_path) %>
-  <% page_info = {link: 'back', title: "LOGIN", button: "Login"} %>
-<% elsif current_page?(new_user_registration_path) %>
-  <% page_info = {link: 'back', title: "REGISTER", button: "Next"} %>
-<%elsif current_page?(groups_path) %>
-  <% page_info = {link: 'menu', title: "GROUPS", button: "Search"} %>
-<% elsif current_page?(new_group_path) %>
-  <% page_info = {link: 'back', title: "NEW GROUP", button: "Create"} %>
-<% elsif current_page?(group_transactions_path) %>
-  <% page_info = {link: 'back', title: "TRANSACTIONS", button: "Search"} %>
-<% elsif current_page?(new_group_transaction_path) %>
-  <% page_info = {link: 'back', title: "NEW TRANSACTION", button: "Create"} %>
+<% if user_signed_in? %>
+  <% if current_page?('/users/sign_in') %>
+    <% page_info = {link: 'back', title: "LOGIN", button: "Login"} %>
+  <% elsif current_page?(new_user_registration_path) %>
+    <% page_info = {link: 'back', title: "REGISTER", button: "Next"} %>
+  <%elsif current_page?(groups_path) %>
+    <% page_info = {link: 'menu', title: "GROUPS", button: "Search"} %>
+  <% elsif current_page?(new_group_path) %>
+    <% page_info = {link: 'back', title: "NEW GROUP", button: "Create"} %>
+  <% elsif current_page?(group_transactions_path) %>
+    <% page_info = {link: 'back', title: "TRANSACTIONS", button: "Search"} %>
+  <% elsif current_page?(new_group_transaction_path) %>
+    <% page_info = {link: 'back', title: "NEW TRANSACTION", button: "Create"} %>
+  <% else %>
+    <% page_info = {link: 'menu', title: "GONE COINS", button: ""} %>
+  <% end %>
 <% else %>
-  <% page_info = {link: 'menu', title: "GONE COINS", button: ""} %>
+  <% if current_page?('/users/sign_in') %>
+    <% page_info = {link: 'back', title: "LOGIN", button: "Login"} %>
+  <% elsif current_page?(new_user_registration_path) %>
+    <% page_info = {link: 'back', title: "REGISTER", button: "Next"} %>
+  <%else%>
+    <% page_info = {link: 'menu', title: "GONE COINS", button: ""} %>
+  <%end%>
 <% end %>
 
-<header class='flex fixed justify-between align-middle bg-primary'>
-    <button class='bg-transparen text-white'>
+<header class='flex fixed align-middle bg-primary'>
+    <button class='bg-transparen menu-toggle px-10 text-white'>
       <% if page_info[:link] == 'menu' %>
-        <span class="material-symbols-outlined hamburger-size">
+        <span class="hamburger material-symbols-outlined hamburger-size">
           menu
         </span>
       <% else %>
@@ -27,12 +37,18 @@
       <% end %>
     </button>
 
-    <h1 class='text-center proxima-regular text-white text-2xl font-bold'>
+    <h1 class='text-center m-auto proxima-regular text-white text-2xl font-bold'>
       <%= page_info[:title] %>
     </h1>
 
-    <button id="submit-form" class='text-white proxima-light'>
-      <%= page_info[:button] %>
+    <button id="submit-form" class='text-white px-10 proxima-light'>
+      <%if page_info[:button] === 'Search'%>
+        <span class="material-symbols-outlined search-size">
+          search
+        </span>
+      <% else %>
+        <%= page_info[:button] %>
+      <% end %>
     </button>
 </header>
 
